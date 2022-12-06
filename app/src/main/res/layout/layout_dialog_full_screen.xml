@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:baselineAligned="false"
+    android:clickable="true"
+    android:fitsSystemWindows="true"
+    android:focusable="true"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/gm_alert_dialog_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/grid_8"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/gm_alert_dialog_close_btn"
+        android:layout_width="@dimen/grid_8"
+        android:layout_height="@dimen/grid_8"
+        android:layout_gravity="start"
+        android:layout_marginStart="@dimen/grid_3"
+        android:layout_marginTop="@dimen/grid_2"
+        android:elevation="@dimen/grid_1"
+        android:foreground="?selectableItemBackgroundBorderless"
+        android:scaleType="fitXY"
+        app:cardCornerRadius="@dimen/grid_4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:contentDescription="@null"
+            android:focusable="true"
+            android:importantForAccessibility="yes"
+            app:srcCompat="@drawable/ic_floating_close_button" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/gm_alert_dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/grid_4"
+        android:layout_marginTop="@dimen/grid_8"
+        android:layout_marginEnd="@dimen/grid_4"
+        android:layout_marginBottom="@dimen/grid_1"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/font_size_20"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/gm_alert_dialog_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gm_alert_dialog_img"
+        tool:text="Dialog Title" />
+
+    <TextView
+        android:id="@+id/gm_alert_dialog_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/grid_4"
+        android:layout_marginTop="@dimen/grid_3"
+        android:layout_marginEnd="@dimen/grid_4"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gm_alert_dialog_title"
+        tool:text="Dialog Message" />
+
+    <Button
+        android:id="@+id/gm_alert_dialog_positive_btn"
+        style="@style/ButtonPrimary"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/grid_12"
+        android:layout_marginStart="@dimen/grid_4"
+        android:layout_marginTop="@dimen/grid_5"
+        android:layout_marginEnd="@dimen/grid_4"
+        android:layout_marginBottom="@dimen/grid_4"
+        app:layout_constraintBottom_toTopOf="@id/gm_alert_dialog_negative_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gm_alert_dialog_text"
+        app:layout_constraintVertical_bias="1" />
+
+    <Button
+        android:id="@+id/gm_alert_dialog_negative_btn"
+        style="@style/ButtonPrimary"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/grid_12"
+        android:layout_marginStart="@dimen/grid_4"
+        android:layout_marginTop="@dimen/grid_5"
+        android:layout_marginEnd="@dimen/grid_4"
+        android:layout_marginBottom="@dimen/grid_4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

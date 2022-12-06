@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/gm_alert_dialog_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@drawable/bg_white_top_round_corner"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="@dimen/grid_4">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/gm_alert_dialog_img"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/grid_44"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toTopOf="@+id/gm_alert_dialog_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/gm_alert_dialog_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/grid_3"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toTopOf="@+id/gm_alert_dialog_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/gm_alert_dialog_img"
+            tools:text="Dialog Title" />
+
+        <TextView
+            android:id="@+id/gm_alert_dialog_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/grid_1"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toTopOf="@+id/gm_alert_dialog_positive_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/gm_alert_dialog_title"
+            tools:text="Dialog message" />
+
+        <Button
+            android:id="@+id/gm_alert_dialog_positive_btn"
+            style="@style/ButtonPrimary"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/grid_12"
+            android:layout_marginTop="@dimen/grid_5"
+            app:layout_constraintBottom_toTopOf="@id/gm_alert_dialog_negative_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/gm_alert_dialog_text" />
+
+        <Button
+            android:id="@+id/gm_alert_dialog_negative_btn"
+            style="@style/ButtonPrimary"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/grid_12"
+            android:layout_marginTop="@dimen/grid_5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/gm_alert_dialog_positive_btn" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">DialogFactory</string>
+    <string name="str_got_it">Got it</string>
+    <string name="str_close">Close</string>
+    <string name="dg_center_title">Center dialog title</string>
+    <string name="dg_center_message">Center dialog message for test</string>
+    <string name="dg_bottom_sheet_title">Bottom sheet dialog title</string>
+    <string name="dg_bottom_sheet_message">Bottom sheet dialog message for test</string>
+    <string name="dg_fullscreen_title">Fullscreen dialog title</string>
+    <string name="dg_fullscreen_message">Fullscreen dialog message for test</string>
+</resources>
